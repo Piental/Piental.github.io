@@ -2,10 +2,14 @@
 
 function openNav() {
     document.getElementById("responsiveNav").style.width = "100%";
+    document.getElementById("responsiveNav").style.height = "100%";
+    document.getElementById("topnav").style.height = "0%";
 }
 
 function closeNav() {
     document.getElementById("responsiveNav").style.width = "0%";
+    document.getElementById("responsiveNav").style.height = "0%";
+    document.getElementById("topnav").style.height = "59px";
 }
 
 let pressed = false;
