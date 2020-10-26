@@ -177,52 +177,79 @@ body {
 
 /* gallery */
 
-.container {
-  max-width: 1170px;
-  margin: auto;
-}
 
 .portfolio {
-  min-height: 100vh;
-  padding: 50px 15px;
-  float: left;
-  width: 100%;
-  background-color: #8cb9d1;
-  }
-
-.heading {
-  width: 100%;
-  float: left;
+padding: 20px;
+width: 100%;
+background-color: #171717;
 } 
 
-.portfolio .heading h1 {
-  color: #f2f2f2;
-  margin: 0 0 20px ;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
+.text-center {
+  padding: 40px 0px 0px 0px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
-.portfolio .filter-btn {
-  float: left;
-  width: 100%;
-  text-align: center;
-}
-
-.portfolio .filter-btn ul{
-  list-style: none;
+ul {
   margin: 0;
-  padding: 0;
+  list-style-type: none;
 }
 
-.portfolio .filter-btn ul li{
+
+#filter-list {
   display: inline-block;
-  padding: 8px 20px;
-  background-color: #dd127b24;
-  color: #f2f2f2;
-  border-radius: 6px;
-  margin: 0 1px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 4px;
+  margin: 0 0 60px;
+}
+
+#filter-list li {
+  display: inline-block;
+  font-size: 16px;
+  color: #888888;
+  text-transform: uppercase;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: 500;
+  padding: 0 20px;
+  min-width: 130px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+}
+
+#filter-list li.active,
+#filter-list li:hover {
+  background-color: #dd127b;
+  color: #fff;
+}
+.gallery {
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px;
+  min-height: 960px;
+}
+
+.gallery_product {
+height: 300px;
+width: 400px;
+position: relative;
+margin: 10px;
+}
+
+.img-responsive {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: ;
 }
 
 #footer {
@@ -310,6 +337,7 @@ a:-webkit-any-link {
     height: 55vh;
     justify-content: center;
   }
+
   .column1,
   .column2,
   .column3 {
@@ -318,9 +346,11 @@ a:-webkit-any-link {
     height: 20%;
     margin: auto;
   }
+
   .column1 {
     margin-bottom: 0px;
   }
+
   .column4 {
     height: 10%;
   }
