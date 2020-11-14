@@ -22,6 +22,10 @@ Dojeżdżamy do klienta"
     />
     <meta name="author" content="Roussoss" />
     <meta name="wszelkie prawa" content="G&amp;HD" />
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit&family=Acme&family=Bangers&family=Alegreya&display=swap"
       rel="stylesheet"
@@ -44,10 +48,10 @@ Dojeżdżamy do klienta"
       <img id="logo" src="/resources/header/logo.png" />
     </div>
     <div id="topnav">
-      <a href="#home" class="link active">Oferta</a>
+      <a href="/index.html" class="link active">Oferta</a>
       <a href="/galeria/gallery.html" class="link">Galeria</a>
-      <a href="#contact" class="link">O firmie</a>
-      <a href="#about" class="link">Kontakt</a>
+      <a href="/ofirmie/ofirmie.html" class="link">O firmie</a>
+      <a href="/kontakt/kontakt.html" class="link">Kontakt</a>
       <a href="javascript:void(0);" class="icon" onclick="openNav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -57,10 +61,10 @@ Dojeżdżamy do klienta"
         >&times;</a
       >
       <div class="overlay-content">
-        <a href="#home" class="link active">Oferta</a>
-        <a href="#news" class="link">Galeria</a>
-        <a href="#contact" class="link">O firmie</a>
-        <a href="#about" class="link">Kontakt</a>
+        <a href="/index.html" class="link active">Oferta</a>
+        <a href="/galeria/gallery.html" class="link">Galeria</a>
+        <a href="/ofirmie/ofirmie.html" class="link">O firmie</a>
+        <a href="/kontakt/kontakt.html" class="link">Kontakt</a>
       </div>
     </div>
     <div class="main">
@@ -145,7 +149,7 @@ Dojeżdżamy do klienta"
               oraz inne.
             </div>
             <div class="buttonField">
-              <a href="#" class="myButton">Przejdź do galerii</a>
+              <a  class="myButton" onclick="goToGallery('oklejanie')">Przejdź do galerii</a>
             </div>
           </div>
         </div>
@@ -163,7 +167,7 @@ Dojeżdżamy do klienta"
               atmosferyczne, zabezpieczone antykorozyjnie.
             </div>
             <div class="buttonField">
-              <a href="#" class="myButton">Przejdź do galerii</a>
+              <a class="myButton" onclick="goToGallery('tablice')">Przejdź do galerii</a>
             </div>
           </div>
         </div>
@@ -180,7 +184,7 @@ Dojeżdżamy do klienta"
               Blacha ocynkowana + Grafika <br />
             </div>
             <div class="buttonField">
-              <a href="#" class="myButton">Przejdź do galerii</a>
+              <a class="myButton" onclick="goToGallery('szyldy')">Przejdź do galerii</a>
             </div>
           </div>
         </div>

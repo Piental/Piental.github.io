@@ -16,11 +16,9 @@ let pressed = false;
 
 function autoSlide() {
     if (pressed === false) {
-        console.log(pressed);
         nextSlide();
     } else {
         pressed = false;
-        console.log(pressed);
     }
 }
 
@@ -30,6 +28,7 @@ window.onload = function () {
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
 
+    if (prevBtn !== null && nextBtn !== null) {
     prevBtn.addEventListener("click", function () {
         prevSlide();
         pressed = true;
@@ -42,6 +41,7 @@ window.onload = function () {
     });
     if (pressed === false) {
         setInterval(autoSlide, 7000);
+    }
     }
 }
 let slideNumber = 0;
@@ -68,4 +68,10 @@ const nextSlide = () => {
         slideNumber = slideNumber + 1;
     }
     slides[slideNumber].classList.add("current");
-}
+};
+
+function goToGallery(product) {
+    window.location = "/galeria/gallery.html?type=" + product
+};
+
+

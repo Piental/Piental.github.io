@@ -17,14 +17,22 @@ Oklejanie pojazdów i sklepów, tablice wolnostojące, szyldy/tablice, banery, l
 Dojeżdżamy do klienta" />
   <meta name="author" content="Roussoss" />
   <meta name="wszelkie prawa" content="G&amp;HD" />
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Acme&family=Bangers&family=Alegreya&display=swap"
     rel="stylesheet" />
   <link href="http://fonts.googleapis.com/css?family=Alata&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/galeria/galleryStyle.css" />
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="css/galleryStyle.css">
+  <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- <script src="/index/slider.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="/galeria/js/lightbox.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
@@ -33,9 +41,9 @@ Dojeżdżamy do klienta" />
   </div>
   <div id="topnav">
     <a href="../index.html" class="link">Oferta</a>
-    <a href="#news" class="link active">Galeria</a>
-    <a href="#contact" class="link">O firmie</a>
-    <a href="#about" class="link">Kontakt</a>
+    <a href="/galeria/gallery.html" class="link active">Galeria</a>
+    <a href="/ofirmie/ofirmie.html" class="link">O firmie</a>
+    <a href="/kontakt/kontakt.html" class="link">Kontakt</a>
     <a href="javascript:void(0);" class="icon" onclick="openNav()">
       <i class="fa fa-bars"></i>
     </a>
@@ -43,48 +51,31 @@ Dojeżdżamy do klienta" />
   <div id="responsiveNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-      <a href="#home" class="link active">Oferta</a>
-      <a href="#news" class="link">Galeria</a>
-      <a href="#contact" class="link">O firmie</a>
-      <a href="#about" class="link">Kontakt</a>
+        <a href="/index.html" class="link">Oferta</a>
+        <a href="/galeria/gallery.html" class="link active">Galeria</a>
+        <a href="/ofirmie/ofirmie.html" class="link">O firmie</a>
+        <a href="/kontakt/kontakt.html" class="link">Kontakt</a>
     </div>
   </div>
+  <div id="middle">
   <div class="portfolio">
-      <div class="row">
-				<div class="col-md-12 text-center">
+      <div class="galleryNavbar">
 					<ul id="filter-list">
 						<li class="filter-button active" data-filter="all">WSZYSTKIE</li>
 						<li class="filter-button" data-filter="oklejanie">OKLEJANIE</li>
 						<li class="filter-button" data-filter="tablice">TABLICE WOLNOSTOJĄCE</li>
 						<li class="filter-button" data-filter="szyldy">SZYLDY/TABLICE</li>
 					</ul>
-				</div>
 			</div>
     <div class="gallery">
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter oklejanie">
-        <img src="/obrazy/Oklejenie Autokaru1.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter tablice">
-        <img src="/obrazy/Tablica wolnostojąca Swedwood Resko 7.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter szyldy">
-        <img src="/obrazy/Szyld na blasze Salon meblowy.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter oklejanie">
-        <img src="/obrazy/Oklejenie Skoda Security patrol2.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter tablice">
-        <img src="/obrazy/Tablica wolnostojąca z logo firmy Anna-Pal.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter szyldy">
-        <img src="/obrazy/Szyld Stalowy Moda for you.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter oklejanie">
-        <img src="/obrazy/Oklejenie VW Lt Deker-Pol 3.jpg" class="img-responsive" />
-      </div>
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter tablice">
-        <img src="/obrazy/Tabliczki Promocyjne.jpg" class="img-responsive" />
-      </div>
+        <a href="/obrazy/Oklejenie Autokaru1.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter oklejanie" data-lightbox="gallery"><img src="/obrazy/Oklejenie Autokaru1.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Tablica wolnostojąca Swedwood Resko 7.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter tablice" data-lightbox="gallery"><img src="/obrazy/Tablica wolnostojąca Swedwood Resko 7.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Szyld na blasze Salon meblowy.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter szyldy" data-lightbox="gallery"><img src="/obrazy/Szyld na blasze Salon meblowy.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Oklejenie Skoda Security patrol2.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter oklejanie" data-lightbox="gallery"><img src="/obrazy/Oklejenie Skoda Security patrol2.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Tablica wolnostojąca z logo firmy Anna-Pal.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter tablice" data-lightbox="gallery"><img src="/obrazy/Tablica wolnostojąca z logo firmy Anna-Pal.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Szyld Stalowy Moda for you.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter szyldy" data-lightbox="gallery"><img src="/obrazy/Szyld Stalowy Moda for you.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Oklejenie VW Lt Deker-Pol 3.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter oklejanie" data-lightbox="gallery"><img src="/obrazy/Oklejenie VW Lt Deker-Pol 3.jpg" class="img-responsive" /></a>
+        <a href="/obrazy/Tabliczki Promocyjne.jpg" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter tablice" data-lightbox="gallery"><img src="/obrazy/Tabliczki Promocyjne.jpg" class="img-responsive" /></a>
     </div>
   </div>
 
@@ -106,14 +97,16 @@ Dojeżdżamy do klienta" />
     </div>
     <div class="column4"></div>
   </div>
-  <!-- <script src="/index/slider.js"></script> -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
   </script>
-  <script src="gallery.js"></script>
+  <script src="js/gallery.js"></script>
+  <script>
+    lightbox.option({
+      'wrapAround': true
+    })
+</script>
+ <script src="/index/slider.js"></script>
 </body>
 </html>

@@ -1,0 +1,151 @@
+#middle {
+  font-family: "Kanit", sans-serif;
+  box-shadow: 0px -12px 23px -4px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+
+  height: fit-content;
+}
+
+/* gallery */
+
+.galleryNavbar {
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.portfolio {
+padding: 20px 0px;
+width: 100%;
+background-color: #171717;
+} 
+
+.text-center {
+  padding: 40px 0px 0px 0px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+
+#filter-list {
+  display: inline-block;
+  border: 1px solid #dd127b;
+  border-radius: 30px;
+  padding: 4px;
+  margin: 0 0 60px;
+  background: url(/resources/header/background.jpg);
+  background-position: -25vw;
+}
+
+#filter-list li {
+  font-family: "Alata",
+  sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  color: rgb(187, 182, 182);
+  text-transform: uppercase;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 0 20px;
+  min-width: 130px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#filter-list li.active,
+#filter-list li:hover {
+  background-color: #dd127ba4;
+  color: #fff;
+}
+.gallery {
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px;
+  height: fit-content;
+  min-height: 320px;
+  transition: transform 0.5s ease;
+  ;
+}
+
+.gallery_product {
+overflow: hidden;
+height: 300px;
+width: 400px;
+position: relative;
+margin: 10px;
+}
+
+
+.img-responsive {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+}
+
+.img-responsive:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+#footer {
+padding-top: 50px;
+top: 0px !important;
+position: relative !important;
+margin-top: 0px !important;
+}
+
+
+@media screen and (max-width: 720px) {
+  
+
+  .portfolio {
+    padding: 0px;
+  }
+
+  .galleryNavbar {
+    /* padding: 10px 0px; */
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+  }
+
+  #filter-list {
+    /* display: flex; */
+    margin: 0px auto;
+    border-radius: 0px;
+    width: 100%;
+    border: none;
+
+  }
+
+  #filter-list li {
+    display: block;
+    width: fit-content;
+    margin: 0px auto;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery_product {
+    margin: 0px;
+  }
+
+  #footer { 
+    padding-top: 0px;
+  }
+}

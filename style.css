@@ -88,8 +88,12 @@ body {
     justify-content: space-between;
   }
 
-  #topnav a:not(:first-child) {
+  #topnav .link {
     display: none;
+  }
+
+  #topnav  .link.active {
+    display: block !important;
   }
 
   #topnav a.icon {
@@ -130,6 +134,10 @@ body {
   color: #818181;
   display: block;
   transition: 0.3s;
+}
+
+.overlay  .active {
+  color: #9e0c57;
 }
 
 .overlay a:hover,
@@ -485,6 +493,7 @@ h1 {
   position: relative;
   width: 30%;
   overflow: hidden;
+  border: 2px solid #dd127b;
 }
 
 .image {
@@ -594,7 +603,7 @@ h1 {
   position: relative;
   margin: auto;
   text-align: center;
-  color: #ff2a98;
+  color: #fff;
   font-family: "Alata", sans-serif;
   font-weight: 600;
 }
@@ -708,6 +717,8 @@ a:-webkit-any-link {
     top: 500vh;
     height: 55vh;
     justify-content: center;
+    position: absolute;
+    margin-top: 110px;
   }
   .column1,
   .column2,
