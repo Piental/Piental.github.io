@@ -32,12 +32,10 @@ window.onload = function () {
     prevBtn.addEventListener("click", function () {
         prevSlide();
         pressed = true;
-        console.log(pressed);
     });
     nextBtn.addEventListener("click", function () {
         nextSlide();
         pressed = true;
-        console.log(pressed);
     });
     if (pressed === false) {
         setInterval(autoSlide, 7000);
@@ -75,3 +73,47 @@ function goToGallery(product) {
 };
 
 
+// dol 
+
+let mobile = false;
+
+window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 500px)").matches) {
+        mobile = false;
+        setOnclick();
+  } else {
+        mobile = true;
+        setOnclick();
+    }
+})
+
+
+window.onload = setOnclick();
+    
+    function setOnclick() { 
+    
+    const href = window.location.href;
+        if (href.includes('index')) {
+        const cards = document.getElementsByClassName('container');
+            if (mobile == true) {
+                for (i = 0; i < cards.length; i++) {
+                    const buttonField = cards[i].children[2].getElementsByClassName("buttonField");
+                    const button = buttonField[0].getElementsByClassName("myButton")[0];
+                    const onclick = button.getAttribute("onclick");
+                    cards[i].setAttribute("onclick", onclick);
+
+                    const middle = cards[i].children[2];
+                    middle.style.display = "none"
+                }
+            }
+
+            else {
+                for (i = 0; i < cards.length; i++) {
+                    cards[i].setAttribute("onclick", "");
+
+                    const middle = cards[i].children[2];
+                    middle.style.display = "block"
+                }
+            }
+    }
+}
