@@ -1,5 +1,10 @@
 // slider - https://www.youtube.com/watch?v=jTsufbSgM8Y
 
+window.onload = function(){
+    slider();
+    setOnclick();
+ }
+
 function openNav() {
     document.getElementById("responsiveNav").style.width = "100%";
     document.getElementById("responsiveNav").style.height = "100%";
@@ -22,8 +27,7 @@ function autoSlide() {
     }
 }
 
-window.onload = function () {
-
+function slider() {
 
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
@@ -86,9 +90,6 @@ window.addEventListener("resize", function() {
         setOnclick();
     }
 })
-
-
-window.onload = setOnclick();
     
     function setOnclick() { 
     
